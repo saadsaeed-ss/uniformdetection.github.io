@@ -1,0 +1,619 @@
+/*--- banner area css start --*/
+.banner-area {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    margin-top: 92px;
+    background: linear-gradient(to bottom, #fefeff, #f7fafe);
+    @include breakpoint (lg) {
+        height: 550px;
+    }
+    @include breakpoint (lg) {
+        height: 650px;
+        margin-top: 0;
+    }
+    @include breakpoint (xl) {
+        height: 750px;
+    }
+    &.style-one {
+        &::after {
+            @extend %absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 50%;
+            height: 100%;
+            background-size: cover;
+            background-position: right;
+            background-image: url(../../assets/images/banner/vpn_bg.png);
+            @include breakpoint(max-lg) {
+                display: none;
+            }
+        }
+        .banner-position {
+            z-index: 1;
+            .section-wrapper {
+                .banner-text {
+                    span {
+                        font-weight: bold;
+                        color: $v-theme-color;
+                        @include breakpoint (sm) {
+                            font-size: 24px;
+                        }
+                    }
+                    h2 {
+                        span {
+                            color: $v-primary-color;
+                            font-size: inherit;
+                            @include breakpoint (xl) {
+                                font-size: 70px;
+                            }
+                        }
+                    }
+                    p {
+                        padding-top: 10px;
+                    }
+                    a {
+                        &.custom-btn {
+                            background: linear-gradient(to right, $v-theme-color, $v-primary-color);
+                            box-shadow: 0 5px 10px rgba(255, 139, 174, 0.70);
+                            span {
+                                font-size: 15px;
+                                font-weight: bold;
+                                color: $white-color;
+                            }
+                        }
+                    }
+                }
+                .banner-thumb {
+                    z-index: 1;
+                    animation: pulsekey 2s infinite;
+                    img {
+                        max-width: none;
+                        float: left;
+                        @include breakpoint (max-xl) {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .banner-position {
+        @extend %absolute;
+        top: 50%;
+        left: 50%;
+        width: 100%;
+        transform: translate(-50%, -50%);
+        @include breakpoint (lg) {
+            top: 48%;
+        }
+        .section-wrapper {
+            width: 100%;
+            @extend %flex;
+            align-items: center;
+            @include breakpoint (max-lg) {
+                display: block;
+            }
+            .banner-text {
+                a {
+                    &.custom-btn {
+                        margin-top: 35px;
+                    }
+                }
+            }
+            .banner-thumb {
+                position: relative;
+                width: 50%;
+                @include breakpoint (max-lg) {
+                    display: none;
+                    
+                }
+                img {
+                  max-width: none;
+                  float: left;
+                }
+                .thumb-left, .thumb-right, .thumb-top {
+                    position: absolute;
+                    width: 200px;
+                    height: 250px;
+                    @include breakpoint (max-sm) {
+                        width: 100px;
+                    }
+                    @include breakpoint (mobile) {
+                        height: 150px;
+                    }
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        @include breakpoint (mobile) {
+                            height: 100%;
+                        }
+                    }
+                }
+                .thumb-left {
+                    top: 42%;
+                    left: 8%;
+                    animation: pulsekey 2s infinite;
+                    @include breakpoint (max-xl) {
+                        left: 10%;
+                        top: 42%;                    
+                    }
+
+                }
+                .thumb-right {
+                    top: 43%;
+                    right: -32%;
+                    animation: pulsekey 3s infinite;
+                    @include breakpoint (max-xl) {
+                        top: 42%;
+                        right: -60%;
+                    }
+                }
+                .thumb-top {
+                    top: 13%;
+                    right: -5%;
+                    width: 100px !important;
+                    height: 200px !important;
+                    animation: pulsekey 1.5s infinite;
+                    @include breakpoint (max-xl) {
+                        top: 12%;
+                    }
+                    img {
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// gobal banner text
+.banner-text {
+    width: 50%;
+    @include breakpoint (max-lg) {
+        width: 100%;
+    }
+    h2 {
+        margin: 0;
+        line-height: 1.2;
+        font-size: 28px;
+        span {
+            color: $theme-color;
+        }
+        @include breakpoint (sm) {
+            font-size: 40px;
+        }
+        @include breakpoint (xl) {
+            font-size: 70px;
+            line-height: 85px;
+        }
+    }
+    p {
+        margin: 0;
+        padding-top: 20px;
+        font-size: 18px;
+        @include breakpoint (sm) {
+            font-size: 22px;
+        }
+    }
+}
+/*--- banner area css ends --*/
+
+
+/*--- App banner area css start --*/
+.app-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(to right, #5146ae, #25a6e4);
+    @include breakpoint (max-lg) {
+        height: auto;
+        padding-top: 90px;
+    }
+    @include breakpoint(lg) {
+        min-height: 850px;
+    }
+    &::after {
+        @extend %absolute;
+        bottom: -15px;
+        right: 0;
+        width: 900px;
+        height: 650px;
+        background-image: url(../../assets/images/banner/app_banner_bg.png);
+        @include breakpoint (max-sm) {
+            display: none;
+        }
+    }
+    .baner-wrapper {
+        width: 100%;
+        @extend %flex;
+        align-items: center;
+        @include breakpoint (max-lg) {
+            display: block;
+            padding: 50px 0;
+        }
+        .banner-text {
+            position: relative;
+            z-index: 1;
+            padding-top: 80px;
+            @include breakpoint (max-lg) {
+                padding-top: 0;
+            }
+            h2 {
+                color: $white-color;
+                margin-bottom: 5px;
+                @include breakpoint(sm) {
+                    margin-bottom: 12px;
+                }
+            }
+            p {
+                color: $white-color;
+                padding-top: 5px;
+            }
+            ul {
+                margin: 0;
+                @extend %flex;
+                justify-content: flex-start;
+                align-items: baseline;
+                @include breakpoint (max-sm) {
+                    display: block;
+                }
+                li {
+                    list-style: none;
+                    &:last-child{
+                        margin-left: 20px;
+                        @include breakpoint (max-sm) {
+                            margin-left: 0;
+                        }
+                        a {
+                            @include breakpoint (max-sm) {
+                                margin-top: 20px;
+                            }
+                        }
+                    }
+                }
+                a {
+                    font-size: 15px;
+                    font-weight: 700;
+                    padding: 13px 33.33px;
+                    background: $a-theme-color;
+                    @include breakpoint (max-sm) {
+                        margin-top: 30px;
+                    }
+                    &:hover, &.active {
+                        color: $a-theme-color;
+                        background: $white-color;
+                    }
+                    &.active {
+                        &:hover {
+                            color: $white-color;
+                            background: $a-theme-color;
+                        }
+                    }
+                }
+            }
+        }
+        .banner-thumb {
+            width: 50%;
+            z-index: 1;
+            @include breakpoint (max-lg) {
+                display: none;
+            }
+            .thumb-content {
+                img {
+                    max-width: none;
+                    float: left;
+                    animation: pulsekey 3s infinite;
+                    @include breakpoint (max-xl) 
+                    {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+    &.style-1 {
+        overflow: hidden;
+        background: linear-gradient(to right, $h-theme-color, $h-primary-color);
+        &::after {
+            content: normal;
+        }
+        .baner-wrapper {
+            .banner-text {
+                span {
+                    font-weight: 700;
+                    color: #38b4ff;         
+                }
+                ul {
+                    li {
+                        a {
+                            &.custom-btn {
+                                background: $h-primary-colors;
+                                box-shadow: 0 5px 10px rgba(82, 97, 235, 0.70);
+                                span {
+                                    color: $white-color;
+                                }
+                                &:hover {
+                                    background: $white-color;
+                                    span {
+                                        color: $h-primary-color;
+                                    }
+                                }
+                                &.active {
+                                    background: $white-color;
+                                    span {
+                                        color: $h-primary-color;
+                                    }
+                                    &:hover {
+                                        background: $h-primary-colors;
+                                        span {
+                                            color: $white-color;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &.style-3 {
+        overflow: hidden;
+        background: linear-gradient(to right, $s-theme-color,  #b43e7d);
+        
+        &::after {
+            content: none;
+        }
+        .baner-wrapper {
+            .banner-text {
+                a {
+                    &.custom-btn {
+                        background: $s-primary-color;
+                        box-shadow: 0 5px 10px rgba(255, 146, 0, 0.39);
+                    }
+                }
+            }
+            .banner-thumb {
+                position: relative;
+                img {
+                    max-width: none;
+                    float: left;
+                }
+                .shape, .shape1 {
+                    @extend %absolute;
+                    @include breakpoint (max-sm) {
+                        height: 150px;  
+                    }
+                    img {
+                        @include breakpoint (max-sm) {
+                            height: 100%;
+                        }
+                    }
+                }
+                .shape {
+                    animation: pulsekey 2s infinite;
+                    @include breakpoint (lg) {
+                        left: 35%;
+                        top: 33%;
+                    }
+                    @include breakpoint (xl) {
+                        left: 28%;
+                        top: 33%;
+                    }
+                }
+                .shape1 {
+                    animation: pulsekey 3s infinite;
+                    @include breakpoint (lg) {
+                        right: -13%;
+                        bottom: 7%;
+                    }
+                    @include breakpoint (xl) {
+                        bottom: 8%;
+                        right: 10%;
+                    }
+                }
+            }
+        }
+    }
+}
+/*--- App banner area css ends --*/
+
+
+/*---- all inner page banner css start -----*/
+.page-header {
+    min-height: 350px;
+    @extend %flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background: linear-gradient(to top, #f7fafe, $white-color);
+    @include breakpoint(xl) {
+        min-height: 550px;
+    }
+    &::after, &::before {
+        @extend %absolute;
+        right: 0;
+        @include breakpoint(max-xl) {
+            display: none;
+        }
+    }
+    &::before {
+        bottom: 0;
+        width: 40%;
+        height: 75%;
+        z-index: 1;
+        background-repeat: no-repeat;
+        background-image: url(../../assets/images/banner/about_right.png);
+    }
+    &::after {
+        top: 0;
+        width: 49%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-image: url(../../assets/images/banner/shape/03.png);
+    }
+    @include breakpoint (max-lg) {
+        height: auto;
+        padding-top: 90px;
+    }
+    .banner-position {
+        .banner-content {
+            position: relative;
+            z-index: 1;
+            h3 {
+                margin: 0;
+                font-size: 25px;
+                @include breakpoint (sm) {
+                    font-size: 36px;
+                }
+            }
+            ul.banner-link {
+                @extend %flex;
+                justify-content: center;
+                align-items: center;
+                margin: 0;
+                li {
+                    padding: 0;
+                    list-style: none;
+                    &:nth-child(2) {
+                        span {
+                            padding: 0 5px;
+                            display: inline-block;
+                        }
+                    }
+                    span {
+                        color: #716c80;
+                        font-weight: 500;
+                    }
+                }
+                a {
+                    color: #716c80;
+                    font-weight: 500;
+                    text-decoration: none;
+                    @include transition ($transition);
+                    &.active {
+                        color: $theme-color;
+                    }
+                    &:hover {
+                        color: $theme-color;
+                    }
+                }
+            }
+        }
+    }
+    &.style-1 {
+        &::before {
+            background-image: url(../../assets/images/banner/contact_right.png);
+        }
+    }
+    &.style-2 {
+        &::before {
+            height: 76%;
+            background-image: url(../../assets/images/banner/services_right.png);
+        }
+    }
+    &.style-3 {
+        &::before {
+            height: 68%;
+            background-image: url(../../assets/images/banner/team_right.png);
+        }
+    }
+    &.style-4 {
+        &::before {
+            background-image: url(../../assets/images/banner/pricing_right.png);
+        }
+    }
+    &.style-5 {
+        &::before {
+            height: 78%;
+            background-image: url(../../assets/images/banner/portfolio_right.png);
+        }
+    }
+    &.style-6 {
+        &::before {
+            height: 74%;
+            background-image: url(../../assets/images/banner/blog_right.png);
+        }
+    }
+    &.style-7 {
+        &::before {
+            height: 72%;
+            width: 45%;
+            background-image: url(../../assets/images/banner/faq_right.png); 
+        }
+    }
+    &.style-8 {
+        min-height: 100vh;
+        &::before {
+            content: none;
+        }
+        &::after {
+           top: auto;
+           bottom: 0;
+           left: 0;
+           height: 730px;
+           width: 40%;
+           background-image: url(../../assets/images/coming/05.png);
+        }
+        .banner-position {
+            .banner-content {
+                img {
+
+                }
+            }
+        }
+        .shap, .shap-1, .shap-2 {
+            @extend %absolute;
+            bottom: 0;
+            top: auto;
+            width: 100px;
+            img {
+                width: 100%;
+            }
+            @include breakpoint (md){
+                width: 150px;
+            }
+            @include breakpoint (lg) {
+                width: 200px;
+            }
+        }
+        .shap {
+            left: 0;
+            @include breakpoint (lg) {
+                left: 3%;
+            }
+        }
+        .shap-1 {
+            right: 14.5%;
+            @include breakpoint (xxl) {
+                right: 15%;
+            }
+        }
+        .shap-2 {
+            right: 0;
+        }
+    }
+    &.style-9 {
+        &::before {
+            height: 78%;
+            background-image: url(../../assets/images/banner/shop.png);
+        }
+        .banner-position {
+            .banner-content {
+                h2 {
+                    margin: 0;
+                    span {
+                        font-size: 40px;
+                        font-weight: 400;
+                    }
+                }
+            }
+        }
+    }
+}
+/*---- all inner page banner css start -----*/
+  

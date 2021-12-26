@@ -1,0 +1,443 @@
+/*--header css start---*/    
+header {
+    position: relative;
+    z-index: 9;
+    box-shadow: 3px 0 3px rgba(239, 247, 255, 0.67);
+    .bg-white {
+        &.menu-fixed {
+            position: fixed !important;
+            top: 0px;
+            left: 0;
+            right: 0;
+            z-index: 999;
+            background-color: #fff !important;
+            box-shadow: 0px 0 10px rgba(136, 136, 136, 0.10);
+        }
+        &.fadeInDown {
+            z-index: 1;
+        }
+        &.slideInUp{
+            position: relative;
+            z-index: 999;
+        }
+        &.app-header {
+        position: fixed;
+        width: 100%;
+        left: 0px;
+        z-index: 20;
+        top: 0px;
+        background: transparent!important;
+        &.menu-fixed {
+            background: linear-gradient(to right, $theme-color, $a-primary-color) !important;
+        }
+        &.slideInUp {
+            position: fixed;
+        }
+
+        .header-item {
+            .header-logo {
+                a {
+                    img {}
+                    h4 {
+                        color: $white-color;
+                        span {
+                            color: $white-color;
+                        }
+                    }
+                }
+            }
+            .header-menu {
+                .primary-menu {
+                    .main-menu-area{
+                        ul.main-menu{
+                            li {
+                                ul.submenu {
+                                    li {
+                                        &.active {
+                                            a {
+                                                color: $a-theme-color!important;
+                                                &::before {
+                                                    background: $a-theme-color!important;
+                                                }
+                                            }
+                                        }
+                                        &:hover {
+                                            a {
+                                                color: $a-theme-color!important;
+                                                &::before {
+                                                    background: $a-theme-color!important;
+                                                }
+                                            }
+                                        }
+                                        a {
+                                            color: #000;
+                                            
+                                        }
+                                    }
+                                }
+                                ul.mega-menu {
+                                    li {
+                                    ul {
+                                        li {
+                                            &:hover {
+                                                a {
+                                                    color: $a-theme-color!important;
+                                                    &::before {
+                                                        background: $a-theme-color!important;
+                                                    }
+                                                }
+                                            } 
+                                        }
+                                    }
+                                    }
+                                }
+                            }
+                            a {
+                                color: $white-color;
+                                &::before {
+                                    background: $a-theme-color;
+                                }
+                                &.dd-icon-down {
+                                    &::after {
+                                        color: #fff;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .herder-icon {
+                a {
+                    &.custom-btn {
+                        margin-top: 0;
+                        padding: 13px 33.33px;
+                        background: $a-theme-color;
+                        box-shadow: 0 7px 10px rgba(255, 124, 67, 0.40);
+                        &:hover {
+                            background: $white-color;
+                            color: $a-theme-color;
+                            box-shadow: 0 7px 10px rgba(255, 255, 255, 0.40);
+                        }
+                    }
+                }
+            }
+        }
+        }
+        &.host-header {
+            &.menu-fixed {
+                background: linear-gradient(to left, $h-primary-color, $h-theme-color) !important;
+            }
+                .header-item {
+                    .header-logo {
+                        a {
+                            h4 {
+                                color: $white-color;
+                                span {
+                                    color: $white-color;
+                                }
+                            }
+                        }
+                    }
+                    .header-menu {
+                        .primary-menu {
+                            .main-menu-area{
+                                ul.main-menu{
+                                    li {
+                                        ul.submenu {
+                                            li {
+                                                &.active {
+                                                    a {
+                                                        color: $h-theme-color!important;
+                                                        &::before {
+                                                            background: $h-theme-color!important;
+                                                        }
+                                                    }
+                                                }
+                                                &:hover {
+                                                    a {
+                                                        color: $h-theme-color!important;
+                                                        &::before {
+                                                            background: $h-theme-color!important;
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                        ul.mega-menu {
+                                            li {
+                                            ul {
+                                                li {
+                                                    &:hover {
+                                                        a {
+                                                            color: $h-theme-color!important;
+                                                            &::before {
+                                                                background: $h-theme-color!important;
+                                                            }
+                                                        }
+                                                    } 
+                                                }
+                                            }
+                                            }
+                                        }
+                                    }
+                                    a {
+                                        color: $white-color;
+                                        &::before {
+                                            background: $h-theme-color;
+                                        }
+                                        &.dd-icon-down {
+                                            &::after {
+                                                color: #fff;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .herder-icon {
+                        a {
+                            &.custom-btn {
+                                background: $h-primary-colors;
+                                box-shadow: 0 5px 10px rgba(82, 97, 235, 0.70);
+                            }
+                        }
+                    }
+                }
+        }
+        &.vpn-header {
+            .header-item {
+                .header-menu {
+                    .primary-menu {
+                        .main-menu-area {
+                            ul {
+                                li {
+                                ul.submenu {
+                                    li {
+                                        &.active {
+                                            a {
+                                                color: $v-theme-color!important;
+                                                &::before {
+                                                    background: $v-theme-color!important;
+                                                }
+                                            }
+                                        }
+                                        &:hover {
+                                            a {
+                                                color: $v-theme-color!important;
+                                                &::before {
+                                                    background: $v-theme-color!important;
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                ul.mega-menu {
+                                    li {
+                                        ul {
+                                            li {
+                                                &:hover {
+                                                    a {
+                                                        color: $v-theme-color!important;
+                                                        &::before {
+                                                            background: $v-theme-color!important;
+                                                        }
+                                                    }
+                                                } 
+                                            }
+                                        }
+                                    }
+                                }
+                                }
+                                a {
+                                &::before {
+                                    background: linear-gradient(to right, $v-theme-color, $v-primary-color);
+                                } 
+                                   
+                            }
+                            }
+                        }
+                    }
+                }
+                .herder-icon {
+                a {
+                    &.custom-btn {
+                        margin-top: 0;
+                        padding: 13px 33.33px;
+                        background: linear-gradient(to right, $v-theme-color, $v-primary-color);
+                        box-shadow: 0 5px 10px rgba(255, 139, 174, 0.70);
+                    }
+                }
+                }
+            }
+        }
+        &.seo-header {
+            &.menu-fixed {
+                background: linear-gradient(to right, $s-theme-color, #b43e7d) !important;
+            }
+            .header-item {
+                .herder-icon {
+                    @include breakpoint(max-xl) {
+                        display: none;
+                    }
+                    a {
+                        &.custom-btn {
+                            background: $s-primary-color;
+                            box-shadow: 0 5px 10px rgba(255, 146, 0, 0.39);
+                        }
+                    }
+                }
+            }
+        }
+        &.about-header {
+            position: fixed;
+            width: 100%;
+            left: 0px;
+            z-index: 20;
+            top: 0px;
+            background: transparent!important;
+            &.menu-fixed {
+                background: $white-color !important;
+                box-shadow: 0px 0 10px rgba(136, 136, 136, 0.10);
+            }
+            .header-item {
+                .header-logo {
+                    a {
+                        img {
+                            // box-shadow: 0 10px 10px rgba(81, 70, 174, 0.10);
+                        }
+                        h4 {
+                            color: $theme-color;
+                            span {
+                                color: $theme-color;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+                }
+                .header-menu {
+                    .primary-menu {
+                        .main-menu-area {
+                            ul.main-menu {
+                                li {
+
+                                }
+                                a {
+                                    color: #000;
+                                    &::before {
+                                        background: $theme-color;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+ 
+}
+/*--header css ends---*/ 
+
+
+/*-- search cart css --*/
+
+.search-area {
+    &.open{
+        .search-input{
+            opacity: 1;
+            visibility: visible;
+            margin-top: 0;
+            z-index: 999;
+            -webkit-transform: perspective(600px) rotateX(0deg); 
+            transform: perspective(600px) rotateX(0deg);
+        }
+    }
+    .search-input {
+        margin: auto;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 1111111;
+        text-align: center;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        opacity: 0;
+        -webkit-transform: perspective(600px) rotateX(-90deg);
+        transform: perspective(600px) rotateX(-90deg);
+        -webkit-transform-origin: center top 0;
+        -ms-transform-origin: center top 0;
+        transform-origin: center top 0;
+        -webkit-transition: all 0.5s ease 0s;
+        -o-transition: all 0.5s ease 0s;
+        transition: all 0.5s ease 0s;   
+        .search-close {
+            @extend %absolute;
+            width: 50px;
+            height: 50px;
+            top: 50px;
+            right: 50px;
+            cursor: pointer;
+            i{
+                font-size: 35px;
+                color: $white-color;
+                transform: rotate(0);
+                transition: all 0.5s ease-in-out;
+                &:hover{
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        form{
+            @extend %absolute;
+            top: 50%;
+            left: 50%;
+            width: 75%;
+            height: 100px;
+            padding: 10px;
+            transform: translate(-50%, -50%);
+            @extend %flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to right, $theme-color, $primary-color);
+            @include border-radius(6px);
+            input{
+                width: 90%;
+                color: $theme-color;
+                border-radius: 0;
+                font-size: 30px;
+                padding: 15px;
+                border: none;
+                margin-bottom: 0;
+                height: 80px;
+                border-bottom: 1px solid rgba(37, 51, 101, 0.15);
+                @include border-radius(6px);
+                &::placeholder{
+                    color: $theme-color;
+                }
+                &:focus {
+                    border-color: transparent;
+                    outline: none;
+                }
+            }
+            button.search-btn {
+                width: 10%;
+                height: 100%;
+                cursor: pointer;
+                color: $white-color;
+                outline: none;
+                background: $primary-color;
+                span.serch-icon {
+                    font-size: 25px;
+                    font-style: normal;
+                }
+            }
+        }
+    }
+}
+/*-- search cart css --*/

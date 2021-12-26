@@ -1,0 +1,71 @@
+$bootstrap-sass-asset-helper: false !default;
+
+//
+// Variables
+// --------------------------------------------------
+//section 
+
+$common-padding:120px 0;
+
+// Colors
+$title-color: #1f202a;
+$desc-color: #716c80;
+$hover-color: #7560eb;
+$theme-color: #5146ae;
+$primary-color: #7560eb;
+$a-theme-color: #ff7c43;
+$a-primary-color: #25a6e4;
+$v-theme-color: #f84d4c;
+$v-primary-color: #f13a88;
+$h-theme-color: #095ab8;
+$h-primary-color: #16064f;
+$h-primary-colors: #5261eb;
+$s-theme-color: #671fa7;
+$s-primary-color: #ff9200;
+$border-color: #ececec;
+$white-color: #fff;
+$ash-color: #f4f9fd;
+$f2-color: #f2f2f2;
+$overlay:rgba(0,0,0,0.5);
+$dark-color:#f0f1f3;
+$text-bg: #484661;
+
+// social-media color
+$facebook: #3b5998;
+$twitter: #55acee;
+$linkedin: #007bb5;
+$pinterest: #007bb5;
+$skype: #2fb7df;
+$youtube: #cd201f;
+$google: #dd4b39;
+$camera: #e4405f;
+$instagram: #e4405f;
+$tumblr: #34465d;
+$behance: #1769ff;
+$star: #e9ba17;
+$green: #0be881;
+$green-h: #0fbcf9;
+$red: #f53b57;
+$yellow: #dec32b;
+$nell: #212fb4;
+$navy: #d8e0f3;
+$plaseholder: #888;
+
+//== Typography
+
+// font-family
+
+$roboto: 'Roboto', sans-serif;
+// font-size
+
+$fs-base:   16px !default;
+$fs-small: 	14px;
+$fs-h1:		100px;
+$fs-h2: 	48px;
+$fs-h3: 	36px;
+$fs-h4: 	24px;
+$fs-h5: 	18px;
+$fs-h6: 	16px;		
+
+//  transition
+$transition: all 0.5s ease;
