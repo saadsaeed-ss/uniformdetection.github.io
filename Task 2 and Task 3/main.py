@@ -63,24 +63,25 @@ new_model.fit(
 
 new_model.save('model.h5')
 
-img_path = 'Dataset/Predict/p1.jpg'
 
-
-def predict(file):
-    pimg = load_img(
-        file,
-        target_size=(64, 64)
-    )
-    pimg = img_to_array(pimg)
-    pimg = np.expand_dims(pimg, axis=0)
-    predictions = new_model.predict(pimg)
-    result = predictions[0]
-    if result[0][0] == 1:
-        an = 'Uniform'
-    else:
-        an = 'Non-Uniform'
-    return an
-
-
-res = predict(img_path)
-print(res)
+# img_path = 'Dataset/Predict/p1.jpg'
+#
+#
+# def predict(file):
+#     pimg = load_img(
+#         file,
+#         target_size=(64, 64)
+#     )
+#     pimg = img_to_array(pimg)
+#     pimg = np.expand_dims(pimg, axis=0)
+#     predictions = new_model.predict(pimg)
+#     result = predictions[0]
+#     if result[0][0] == 1:
+#         an = 'Uniform'
+#     else:
+#         an = 'Non-Uniform'
+#     return an
+#
+#
+# res = predict(img_path)
+# print(res)
